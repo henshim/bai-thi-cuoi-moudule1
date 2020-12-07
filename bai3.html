@@ -6,23 +6,23 @@
 </head>
 <body>
 <script>
-    function isFibonaci(x) {
-        x = prompt('nhập số: ');
+    function isFibonaci(fib, count) {
+        let x = prompt('nhập số: ');
         let a = 0;
         let b = 1;
-        let total = 0;
-        let count = 0
         for (let i = 0; i < x; i++) {
-            total = a + b;
+            fib = a + b;
             a = b;
-            b = total;
-            if (x == total) {
+            b = fib;
+            if (x == fib) {
                 count++;
             }
         }
-        if (count !==0 ) {
+        if (count != 0) {
             console.log('true');
-        } else {console.log('false');}
+        } else {
+            console.log('false');
+        }
     }
 
     isFibonaci();
